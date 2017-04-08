@@ -13,19 +13,26 @@
       form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
       form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
       form span {color:white}
-      #messages { list-style-type: none; margin: 0; padding: 0; width:90%;}
-      #users { list-style-type: none; margin: 0; padding: 0; width:9%;}
+      form p {color:white; font-size: 10px;}
+      #user-container {float:right;width: 19.5%;border-left: 3px solid black;height: 100vh}
+      #messages { list-style-type: none; margin: 0; padding: 0; width:80%;display:inline-block;}
+      #users { list-style-type: none; margin: 0; padding: 0; width:100%;color: black;display:inline-block;float: right;text-align: center;}
       #messages li { padding: 5px 10px; }
+      #users li:nth-child(odd) { background: #eee; }
       #messages li:nth-child(odd) { background: #eee; }
+      #users li:nth-child(1) { background-color: #f6ce66; }
     </style>
   </head>
   <body>
     <div id="message_container">
 
       <ul id="messages"></ul>
-      <ul id="users"></ul>
+      <div id="user-container">
+        <ul id="users"></ul>
+      </div>
     </div>
     <form action="">
+      <p id="typingmessage"></p>
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
   </body>
